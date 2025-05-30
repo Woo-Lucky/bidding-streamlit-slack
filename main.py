@@ -3,8 +3,8 @@ import requests
 import pandas as pd
 from datetime import datetime
 
-API_KEY = os.getenv("snOlXoqmO+Auj39eC+RSnF27Y7g8dM+g4YxudtLaq5664xOw1XdFW6JMGQE1Fi/3981bQGnKsooawG67Jn0zTg==")
-SLACK_URL = os.getenv("https://hooks.slack.com/triggers/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")
+API_KEY = os.getenv("G2B_API_KEY")
+SLACK_URL = os.getenv("SLACK_WEBHOOK_URL")
 BASE_URL = "http://apis.data.go.kr/1230000/ad/BidPublicInfoService/getBidPblancListInfo"
 
 def format_date(dt):
