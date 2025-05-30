@@ -28,7 +28,12 @@ def fetch_data():
         return pd.DataFrame()
 
 def send_to_slack(text):
-    resp = requests.post(SLACK_URL, json={"text": text})
+    resp = requests.post(
+        SLACK_URL, 
+        json={"text": text},
+        headers={"Content-Type": "application/json"}
+    )
+    print(f"Slack call status: {resp.status_code}, response body: {resp.text}")  # 디버그 출력
     return resp.status_code == 200
 
 def main():
